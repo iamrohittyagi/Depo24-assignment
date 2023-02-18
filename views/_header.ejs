@@ -1,0 +1,18 @@
+<nav class="navbar navbar-dark bg-danger">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">DOPO24</a>
+    <%if(locals.user){%>
+    <div class="d-flex">
+      <a href="/user/signout" class="btn btn-warning">SignOut</a>
+      <a href="/product/addProduct" class="btn btn-warning ms-3"
+        >Add New Products</a
+      >
+    </div>
+    <%}else{%>
+    <div class="d-flex justify-content-around">
+      <a href="/user/signin" class="btn btn-warning">SignIn</a>
+      <a href="/user/signup" class="btn btn-warning ms-3">SignUp</a>
+    </div>
+    <%}%>
+  </div>
+</nav>
